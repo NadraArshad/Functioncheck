@@ -1,0 +1,162 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,body{
+    width: 100%;
+    height: 100%;
+}
+
+body{
+    background-color: #F2F2F2;
+}
+
+.nav{
+    width:100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5vw 4vw;
+    
+   
+    
+}
+.nav h1{
+    display: inline;
+}
+.nav h3{
+    padding:1.2vw ;
+    display: inline;
+}
+.btn button{
+    background-color:#F2F2F2;
+    padding: 0.8vw 2vw;
+    border-radius: 15px;
+    border: 1px solid black;
+}
+.hero{
+    width: 100%;
+    height:100vh;
+    display: flex;
+    align-items: center;
+    padding:4vw;
+    overflow: hidden;
+}
+.hero span{
+color: #BDBBBB;
+}
+.hero h1{
+    margin-top:4.5vw;
+    width:100%;
+    font-size:4.5rem;
+    font-weight: 2rem;
+    margin-bottom: 2vw;
+}
+.hero h2{
+    width:60%;
+    margin:3vw 0;
+    font-weight: 200;
+    font-size: 1rem;
+    
+}
+
+.hero button{
+    background-color:#F2F2F2;
+    padding: 0.95vw 2vw;
+    border-radius: 15px;
+    border: 1px solid black;
+}
+
+
+#page2{
+    width: 100%;
+    min-height: 100vh;
+    padding: 1.4vw 0vw;
+    position: relative;
+}
+
+#circle{
+    width:1vw;
+    height: 1vw;
+    border-radius: 50%;
+background-color: #C2FA1F;
+
+    display: inline-block;
+    margin: 0.5vw 1.7vw;
+}
+
+#moving-text{
+    white-space: nowrap;
+    overflow-x: auto;
+}
+
+#moving-text::-webkit-scrollbar{
+    display: none;
+}
+
+#con{
+    white-space: nowrap;
+    display: inline-block;
+    animation-name: move;
+    animation-duration: 15s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+   
+}
+
+#con h1{
+    font-size: 3vw;
+    color:#828282;
+    text-transform: uppercase;
+    display: inline-block;
+    white-space: nowrap;
+    letter-spacing: 0vw;
+}
+
+@keyframes move {
+    from{
+        transform: translateX(0%);
+    }
+    to{
+        transform: translateX(-100%);
+    }
+}
+
+.sec{
+    width: 100%;
+    height:60vh;
+    padding: 4vw;
+}
+
+.cards{
+    width:100%;
+    height: 45vh;
+    margin-top: 1vw;
+    display: flex;
+    justify-content: space-between;
+}
+
+.card{
+    padding:4vh 2vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: antiquewhite;
+    border-radius: 15px;
+    font-weight: 100;
+}
+.card1 {
+    width:45%;
+    background-color: #C2FA1F;
+}
+.card2{
+    width:25%;
+    background-color: #D9D9D9;
+}
+.card3{
+    width: 25%;
+    background-color: #2F2F2F;
+    color: #FFFFFF;
+}
