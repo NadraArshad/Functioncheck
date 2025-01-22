@@ -53,6 +53,58 @@ export const fetchTrackingData = async () => {
     return [];
   }
 };
+export const getNGOs = async () => {
+  try {
+    const response = await axios.get(`${API_URL}/ngos`);
+    return response.data;  
+  } catch (error) {
+    console.error('Error fetching NGOs:', error);
+    return [];
+  }
+};
 
+// Add 
+export const addNGO = async (newNgo) => {
+  try {
+    const response = await axios.post(`${API_URL}/ngos`, newNgo);
+    return response.data;  
+  } catch (error) {
+    console.error('Error adding NGO:', error);
+    return null;
+  }
+};
+
+// Update 
+export const updateNGO = async (id, updatedNgo) => {
+  try {
+    const response = await axios.put(`${API_URL}/ngos/${id}`, updatedNgo);
+    return response.data; 
+  } catch (error) {
+    console.error('Error updating NGO:', error);
+    return null;
+  }
+};
+
+// Delete
+export const deleteNGO = async (id) => {
+  try {
+    await axios.delete(`${API_URL}/ngos/${id}`);
+    return true;
+  } catch (error) {
+    console.error('Error deleting NGO:', error);
+    return false;
+  }
+};
+
+// Fetch
+export const getNGOStats = async (id) => {
+  try {
+    const response = await axios.get(`${API_URL}/ngos/${id}/stats`);
+    return response.data;  
+  } catch (error) {
+    console.error('Error fetching NGO stats:', error);
+    return { donationsReceived: 0, pickupsScheduled: 0, tasksCompleted: 0 };
+  }
+};
 
 export default API;
